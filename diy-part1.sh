@@ -25,3 +25,7 @@ echo 'src-git liuran001 https://github.com/liuran001/openwrt-packages' >>feeds.c
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
  
+# 更新并安装插件
+./scripts/feeds clean
+./scripts/feeds update -a
+./scripts/feeds install -a
