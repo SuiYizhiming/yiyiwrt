@@ -27,7 +27,7 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 
 #修改编译版本
-sed -i 's/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/' ./target/linux/x86/Makefile
+sed -i 's/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=5.10/' ./target/linux/x86/Makefile
  
 ./scripts/feeds clean
 ./scripts/feeds update -a
