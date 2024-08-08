@@ -29,3 +29,6 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 #修改编译版本
 sed -i 's/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/' ./target/linux/x86/Makefile
  
+./scripts/feeds clean
+./scripts/feeds update -a
+./scripts/feeds install -a
