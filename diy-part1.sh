@@ -16,7 +16,7 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add a feed source 24.8.7
+# Add a feed source 
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages'  >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
@@ -25,4 +25,7 @@ echo 'src-git haibo https://github.com/haiibo/openwrt-packages' >>feeds.conf.def
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
+
+#修改编译版本
+sed -i 's/^KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/' ./target/linux/x86/Makefile
  
